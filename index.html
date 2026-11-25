@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnHub | Online Course Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-screen" class="login-wrap">
+    <section class="login-card">
+      <div class="brand-mark">LH</div>
+      <h1>Welcome to LearnHub</h1>
+      <p class="muted">Online Course Management System</p>
+      <form id="login-form">
+        <label for="name">Your name</label>
+        <input id="name" type="text" placeholder="Enter your name" required>
+        <label for="role">Login as</label>
+        <select id="role">
+          <option value="student">Student</option>
+          <option value="instructor">Instructor</option>
+          <option value="admin">Admin</option>
+        </select>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter any password" required>
+        <button class="primary full" type="submit">Login</button>
+      </form>
+      <p class="hint">Demo project: enter any name and password, then choose a role.</p>
+    </section>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="side-brand"><span class="brand-mark small">LH</span><span>LearnHub</span></div>
+      <p class="nav-caption">MENU</p>
+      <button class="nav-link active" data-page="dashboard">▦ <span>Dashboard</span></button>
+      <button class="nav-link" data-page="courses">▤ <span>Courses</span></button>
+      <button class="nav-link" data-page="my-learning">▣ <span>My Learning</span></button>
+      <button class="nav-link role-only hidden" data-page="instructor">♧ <span>Instructor</span></button>
+      <button class="nav-link role-only hidden" data-page="admin">⚙ <span>Admin Panel</span></button>
+      <div class="sidebar-bottom"><button id="logout" class="nav-link">↪ <span>Logout</span></button></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow">LEARN. GROW. ACHIEVE.</p><h2 id="page-heading">Dashboard</h2></div>
+        <div class="profile"><div class="avatar" id="avatar">U</div><div><strong id="user-name">User</strong><small id="user-role">Student</small></div></div>
+      </header>
+      <section id="page-content"></section>
+      <footer>© 2026 LearnHub · Software Engineering Mini Project</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
